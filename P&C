@@ -1,0 +1,41 @@
+import java.util.Scanner;
+public class p&c{
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+int n, r , nfact, rfact, k, p, c;
+System.out.println("Enter the number of objects you can select from"); 
+n = scanner.nextInt();
+System.out.println("Enter the number of objects you want to select"); 
+r = scanner.nextInt();
+if(n < r)
+{
+System.out.println("This isn't a possible case scenario; please select two valid numbers");
+}
+for(int i = 1; i <= n; i++)
+{
+nfact *= i;
+}
+for(int j = 1; j <= r; j++)
+{
+rfact *= j;
+}
+if(n = r)
+System.out.println("You've" + nfact + "permutations and 1 combination to make");
+for(int l = 1; l <= (n - r); l++)
+{
+k *= l;
+}
+p = nfact/k;
+c = p/rfact;
+System.out.print("The number of possible permutations is" + p); 
+System.out.print("The number of possible combinations is" + c);
+}
+}
+}
+
+
+
+
+
+
+
